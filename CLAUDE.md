@@ -12,7 +12,6 @@ Workspace-wide rules and state caveats live at `../CLAUDE.md` (= `/space/drone/C
 
 - Single package: `custos_control_pixhawk` (`package.xml`, `CMakeLists.txt`, empty `src/`). No real bridge implementation yet.
 - **Choice still open:** uXRCE-DDS vs MAVROS as the Pixhawk transport. The package skeleton declares neither dependency; pick one before adding code and capture the decision as an ADR.
-- **Brace-expansion litter:** there is a literal directory named `{.github` alongside the real `.github/`. Do not stage it.
 
 ## Cross-repo edges
 
@@ -43,6 +42,5 @@ ros2 launch custos_control_pixhawk pixhawk.launch.py   # TODO: launch file unwri
 - Cross-repo CI policy: ADR 0009
 - Mission/planner boundary: planning record §"Repo list" (control owns mission; navigation owns path)
 
-> TODO(post-first-commit): delete the `{.github` litter directory before the initial commit.
 > TODO(post-active): write an ADR locking uXRCE-DDS vs MAVROS, then implement the bridge.
 > TODO(post-active): document Pixhawk firmware version compatibility once tested against real hardware.
